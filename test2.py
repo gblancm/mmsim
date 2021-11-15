@@ -7,17 +7,13 @@ import mmsim
 
 mysim=mmsim.distsim()
 
+mysim.dfdfile='1536revA_dfd.pkl' # set differential field distorsion file 
+mysim.simtype='atmostel'
 
-# Zenith 1h exp at range of starting HA (with ADC)
 
+# 1h exp at dec=-29 at a range of starting HA
+mysim.obs.texp=3600
 mysim.obs.decstart=-29
-mysim.ADC=True
-
-mysim.obs.texp=1800
-
-mysim.obs.hastart=-60
-mysim.output='distsim_m60_1hr'
-mysim.run()
 
 mysim.obs.hastart=-50
 mysim.output='distsim_m50_1hr'
@@ -39,11 +35,9 @@ mysim.obs.hastart=-10
 mysim.output='distsim_m10_1hr'
 mysim.run()
 
+# 30 min exp at dec=-29 at a range of starting HA
 mysim.obs.texp=1800
-
-mysim.obs.hastart=-60
-mysim.output='distsim_m60_1800s'
-mysim.run()
+mysim.obs.decstart=-29
 
 mysim.obs.hastart=-50
 mysim.output='distsim_m50_1800s'

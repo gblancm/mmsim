@@ -29,7 +29,7 @@ mysim.wmax=6500 # reddest sampled wavelength [A]
 mysim.Nw=5 # number of wavelength samplings within range; guiding is done at the central wavelngth so needs to be odd
 mysim.Nt=31 # number of time samplings within exposure time ; aperture is drawn at center of exposure, so ideally odd
 mysim.Nf=3 # number of sampling grid steps per field radius
-mysim.ADC=True # apply a perfect ADC correction for the center of the field
+mysim.simtype='atmoscorr' # apply a perfect ADC correction for the center of the field
 mysim.output='distsim_cuby200_1a' # name of the output filenames
 
 # Run the simulation to reproduce Figure 1a in Cuby et al. 200
@@ -41,7 +41,7 @@ mysim.output='distsim_cuby200_1b'
 mysim.run()
 
 # Now do Figure 3a
-mysim.ADC=False
+mysim.simtype='atmos'
 mysim.Nf=2
 mysim.output='distsim_cuby200_3a' 
 mysim.run()
