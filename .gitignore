@@ -1,4 +1,7 @@
 .DS_store
 __pycache__/
 .vscode/
+zemax/
 *png
+plots/
+*pkl
