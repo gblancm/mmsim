@@ -3,5 +3,5 @@ __pycache__/
 .vscode/
 zemax/
 *png
-plots/
+plots/*png
 *pkl
